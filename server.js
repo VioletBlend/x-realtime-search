@@ -5,10 +5,15 @@ const WebSocket = require("ws");
 const app = express();
 app.use(express.static("public"));
 
+<<<<<<< HEAD
 // ★ Render 用 PORT 設定
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+=======
+const server = app.listen(3000, () => {
+  console.log("http://localhost:3000");
+>>>>>>> 6bea8987857475fcc86a320ca40db6b17a51eb7a
 });
 
 const wss = new WebSocket.Server({ server });
@@ -43,6 +48,10 @@ wss.on("connection", ws => {
       lastTweetId = null;
       console.log("検索ワード変更:", keyword);
 
+<<<<<<< HEAD
+=======
+      // ★ キーワード入力時だけ即時検索
+>>>>>>> 6bea8987857475fcc86a320ca40db6b17a51eb7a
       await pollSearch();
     }
   });
@@ -86,6 +95,11 @@ async function pollSearch() {
 
   if (!lastTweetId) {
     lastTweetId = tweets[0].id;
+<<<<<<< HEAD
+=======
+
+    // ★ 初回でもツイートを送る
+>>>>>>> 6bea8987857475fcc86a320ca40db6b17a51eb7a
     newTweets.push(...tweets);
   } else {
     for (const t of tweets) {
@@ -100,4 +114,18 @@ async function pollSearch() {
     newTweets.reverse();
     newTweets.forEach(tweet => {
       const payload = { data: tweet };
+<<<<<<< HEAD
       wss.clients
+=======
+      wss.clients.forEach(client => {
+        if (client.readyState === WebSocket.OPEN) {
+          client.send(JSON.stringify(payload));
+        }
+      });
+    });
+  }
+}
+
+/* ★ 900秒（15分）ごとに検索 */
+setInterval(pollSearch, 900000);
+>>>>>>> 6bea8987857475fcc86a320ca40db6b17a51eb7a

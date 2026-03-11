@@ -1,7 +1,11 @@
 {
   "name": "x_river",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "\\#　X\\_realtime\\_search",
+=======
+  "description": "",
+>>>>>>> 6bea8987857475fcc86a320ca40db6b17a51eb7a
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

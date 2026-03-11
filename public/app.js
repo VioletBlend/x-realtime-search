@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 // ★ Render 対応 WebSocket（http→ws / https→wss）
 const socket = new WebSocket(
   (location.protocol === "https:" ? "wss://" : "ws://") + location.host
 );
 
+=======
+const socket = new WebSocket(`ws://${location.host}`);
+>>>>>>> 6bea8987857475fcc86a320ca40db6b17a51eb7a
 const input = document.getElementById("keyword");
 const searchBtn = document.getElementById("search-btn");
 let history = [];
@@ -13,6 +17,10 @@ function sendKeyword(keyword) {
 
   socket.send(JSON.stringify({ type: "setKeyword", keyword: fixed }));
 
+<<<<<<< HEAD
+=======
+  // TLリセット
+>>>>>>> 6bea8987857475fcc86a320ca40db6b17a51eb7a
   document.getElementById("tweet-container").innerHTML = "";
 
   addHistory(keyword);
@@ -68,6 +76,10 @@ function renderTweet(tweet) {
 
   container.prepend(div);
 
+<<<<<<< HEAD
+=======
+  /* ★ 最新30件だけ保持 */
+>>>>>>> 6bea8987857475fcc86a320ca40db6b17a51eb7a
   while (container.children.length > 30) {
     container.removeChild(container.lastChild);
   }
@@ -138,7 +150,11 @@ function randomName(length = 10) {
   return result;
 }
 
+<<<<<<< HEAD
 /* ===== TLを縦長画像として保存 ===== */
+=======
+/* ===== TLを縦長画像として保存（完全版） ===== */
+>>>>>>> 6bea8987857475fcc86a320ca40db6b17a51eb7a
 document.getElementById("save-long-image").onclick = () => {
   const target = document.getElementById("tweet-container");
 
@@ -150,7 +166,14 @@ document.getElementById("save-long-image").onclick = () => {
     useCORS: true
   }).then(canvas => {
     const link = document.createElement("a");
+<<<<<<< HEAD
     const filename = `timeline-${randomName(10)}.png`;
+=======
+
+    // ★ ランダムファイル名
+    const filename = `timeline-${randomName(10)}.png`;
+
+>>>>>>> 6bea8987857475fcc86a320ca40db6b17a51eb7a
     link.href = canvas.toDataURL("image/png");
     link.download = filename;
     link.click();
