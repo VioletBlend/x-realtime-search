@@ -22,4 +22,5 @@ npm install
 node server.js
 ```
 
-![Screenshot_2026-03-12-05-02-18-59_40deb401b9ffe8e1df2f1cc5ba480b12](https://github.com/user-attachments/assets/b8b44abf-13b6-4f29-b1f7-8d68a839a88c)
+![Screenshot_2026-03-12-05-13-52-40_40deb401b9ffe8e1df2f1cc5ba480b12](https://github.com/user-attachments/assets/084b301b-02f2-42f3-b5cc-e2c222397ff0)
+
