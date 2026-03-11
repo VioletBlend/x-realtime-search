@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 import dotenv from "dotenv";
 import express from "express";
 import { WebSocketServer } from "ws";
 
 dotenv.config();
+=======
+require("dotenv").config();
+const express = require("express");
+const WebSocket = require("ws");
+>>>>>>> 53f3d6f49e702640e387c0e6c2a4d73e69854de2
 
 const app = express();
 app.use(express.static("public"));
@@ -13,7 +19,11 @@ const server = app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
+<<<<<<< HEAD
 const wss = new WebSocketServer({ server });
+=======
+const wss = new WebSocket.Server({ server });
+>>>>>>> 53f3d6f49e702640e387c0e6c2a4d73e69854de2
 
 async function callXAPI(url, options = {}) {
   const res = await fetch(url, {
@@ -103,7 +113,11 @@ async function pollSearch() {
     newTweets.forEach(tweet => {
       const payload = { data: tweet };
       wss.clients.forEach(client => {
+<<<<<<< HEAD
         if (client.readyState === 1) {
+=======
+        if (client.readyState === WebSocket.OPEN) {
+>>>>>>> 53f3d6f49e702640e387c0e6c2a4d73e69854de2
           client.send(JSON.stringify(payload));
         }
       });

@@ -2,10 +2,15 @@
   "name": "x-realtime-search",
   "version": "1.0.0",
   "main": "server.js",
+<<<<<<< HEAD
+=======
+  "type": "module",
+>>>>>>> 53f3d6f49e702640e387c0e6c2a4d73e69854de2
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
+<<<<<<< HEAD
     "dotenv": "^16.6.1",
     "express": "^4.22.1",
     "ws": "^8.19.0"
@@ -15,4 +20,10 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs"
+=======
+    "express": "^4.18.2",
+    "ws": "^8.13.0",
+    "dotenv": "^16.0.3"
+  }
+>>>>>>> 53f3d6f49e702640e387c0e6c2a4d73e69854de2
 }
