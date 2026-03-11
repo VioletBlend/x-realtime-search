@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Xリアルタイム検索</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-dark">
+
+  <header>
+    <h1>Xリアルタイム検索</h1>
+
+    <div id="theme-icons">
+      <div class="theme-circle" data-theme="theme-dark" style="background:#000;"></div>
+      <div class="theme-circle" data-theme="theme-light" style="background:#f5f5f5;"></div>
+      <div class="theme-circle" data-theme="theme-mint" style="background:#00bfa5;"></div>
+      <div class="theme-circle" data-theme="theme-pink" style="background:#f50057;"></div>
+      <div class="theme-circle" data-theme="theme-sky" style="background:#2196f3;"></div>
+    </div>
+
+    <div id="search-box">
+      <input id="keyword" type="text" placeholder="検索ワードを入力（例：猫 可愛い）">
+      <button id="search-btn">検索</button>
+    </div>
+
+    <div id="history"></div>
+
+    <!-- ★ TL縦長画像保存ボタン -->
+    <button id="save-long-image" class="save-btn">TLを画像保存</button>
+  </header>
+
+  <main>
+    <div id="tweet-container"></div>
+  </main>
+
+  <!-- html2canvas 読み込み -->
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
