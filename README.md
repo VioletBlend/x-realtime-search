@@ -1,8 +1,14 @@
 # X\_realtime\_search
 
+<br>
 
+旧ツイッターリアルタイム検索エンジン
 
-## ベアートークンはXの
+<br>
+
+## ベアートークン（必須）
+
+Xの
 
 デベロッパーサイトにて取得して
 
@@ -12,7 +18,11 @@
 
 
 
-場所は、.envファイル内に記述する箇所があります。
+.envファイル内に記述する箇所があります。
+
+<br>
+
+<br>
 
 ```
 git clone https://github.com/VioletBlend/x-realtime-search.git
@@ -22,6 +32,11 @@ npm install
 node server.js
 ```
 
+<br>
+
+<br>
+
+## TimeLine
 <br>
 
 <br>
