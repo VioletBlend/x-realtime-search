@@ -1,23 +1,14 @@
 {
-  "name": "x_river",
+  "name": "x-realtime-search",
   "version": "1.0.0",
-<<<<<<< HEAD
-  "description": "\\#　X\\_realtime\\_search",
-=======
-  "description": "",
->>>>>>> 6bea8987857475fcc86a320ca40db6b17a51eb7a
   "main": "server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
-    "dotenv": "^17.3.1",
-    "express": "^5.2.1",
-    "ws": "^8.19.0"
+    "express": "^4.18.2",
+    "ws": "^8.13.0",
+    "dotenv": "^16.0.3"
   }
 }
