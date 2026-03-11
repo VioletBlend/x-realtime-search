@@ -1,8 +1,8 @@
-\#　X\_realtime\_search
+# X\_realtime\_search
 
 
 
-\##　ベアートークンはXのデベロッパーサイトにて取得して
+## ベアートークンはXのデベロッパーサイトにて取得して
 
 
 
@@ -11,4 +11,12 @@
 
 
 場所は、.envファイル内に記述する箇所があります。
+
+```
+git clone https://github.com/VioletBlend/x-realtime-search.git
+cd x-realtime-search
+npm init -y
+npm install
+node server.js
+```
 
