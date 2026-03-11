@@ -1,0 +1,219 @@
+/* ===== テーマカラー ===== */
+.theme-dark {
+  --bg: #000;
+  --fg: #fff;
+  --accent: #1d9bf0;
+  --item-bg: #222;
+}
+
+.theme-light {
+  --bg: #f5f5f5;
+  --fg: #111;
+  --accent: #0077cc;
+  --item-bg: #ddd;
+}
+
+.theme-mint {
+  --bg: #eafff4;
+  --fg: #004d40;
+  --accent: #00bfa5;
+  --item-bg: #c8fff4;
+}
+
+.theme-pink {
+  --bg: #fff0f6;
+  --fg: #880e4f;
+  --accent: #f50057;
+  --item-bg: #ffd1e8;
+}
+
+.theme-sky {
+  --bg: #e8f4ff;
+  --fg: #003c8f;
+  --accent: #2196f3;
+  --item-bg: #cfe8ff;
+}
+
+/* ===== 全体 ===== */
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ===== ヘッダー ===== */
+header {
+  position: sticky;
+  top: 0;
+  background: var(--item-bg);
+  padding: 4px 8px;
+  text-align: left;
+  border-bottom: 1px solid #222;
+  z-index: 10;
+}
+
+header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* 保存ボタン */
+.save-btn {
+  margin-top: 6px;
+  padding: 8px 14px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ===== テーマアイコン ===== */
+#theme-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 6px 0;
+}
+
+.theme-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #fff;
+  transition: 0.2s;
+}
+
+.theme-circle:hover {
+  transform: scale(1.15);
+  border-color: var(--accent);
+}
+
+/* ===== 検索フォーム ===== */
+#search-box {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  max-width: 600px;
+  margin: 0 auto 4px auto;
+}
+
+#keyword {
+  width: 330px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 3px solid var(--accent);
+  background: var(--item-bg);
+  color: var(--fg);
+  font-size: 17px;
+  font-weight: 500;
+}
+
+#keyword:focus {
+  outline: none;
+  border-color: var(--fg);
+  background: var(--bg);
+}
+
+#search-btn {
+  padding: 10px 16px;
+  background: var(--accent);
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* ===== 履歴 ===== */
+#history {
+  margin-top: 6px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.history-item {
+  background: var(--item-bg);
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--accent);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.history-delete {
+  color: #f55;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ===== TL（ツイート） ===== */
+#tweet-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.tweet {
+  padding: 12px 0;
+  border-bottom: 1px solid #222;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.tweet-user {
+  font-weight: 600;
+  color: var(--fg);
+  margin-bottom: 4px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.id {
+  color: #777;
+}
+
+.tweet-text {
+  font-size: 15px;
+  line-height: 1.35;
+  white-space: pre-wrap;
+  margin-top: 4px;
+  overflow: visible !important;
+  max-height: none !important;
+  display: block !important;
+}
+
+/* ソース非表示 */
+.tweet-meta {
+  display: none !important;
+}
+
+.tweet-img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 8px;
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
